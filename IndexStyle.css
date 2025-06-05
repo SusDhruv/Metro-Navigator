@@ -1,0 +1,337 @@
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+body {
+  zoom: 0.9; /* Other non-webkit browsers */
+  zoom: 90%; /* Webkit browsers */
+  /*background-image: url("delhi-map.png");*/
+  padding-bottom: 150px;
+  overflow-x: hidden;
+  background-color: white;
+}
+input[type="button"] {
+  background-color: rgb(49, 46, 226);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  top: 40px;
+  left: 195px;
+}
+
+input[type="button"]:hover {
+  background-color: red;
+}
+input[type="text"] {
+  transition: width 0.4s ease-in-out;
+}
+input[type="text"]:focus {
+  width: 100%;
+}
+.from {
+  position: relative;
+  top: 30px;
+}
+.to {
+  position: relative;
+  top: 40px;
+}
+.container {
+  float: left;
+  position: relative;
+  top: 50px;
+  bottom: 20px;
+  margin-left: 550;
+  border-radius: 15px;
+  background-color: rgb(127, 209, 236);
+  padding: 30px;
+  width: 600px;
+  height: 600px;
+  overflow: visible;
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+}
+.total {
+  display: flex;
+}
+.live-map {
+  display: inline;
+  margin-inline: 400px;
+}
+.container P {
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+  left: 61px;
+}
+.container label {
+  color: rgb(170, 13, 13);
+  font-size: 25px;
+  font-weight: 500;
+}
+.pathout-container P {
+  color: black;
+  font-size: 35px;
+  font-weight: 600;
+  position: relative;
+  top: 2px;
+  left: 50px;
+}
+.headers {
+  font-size: 25px;
+  font-weight: 600;
+}
+.pc-others {
+  color: black;
+  font-size: 20px;
+}
+.inter-img {
+  height: 50px;
+  width: auto;
+}
+.pathout-container {
+  height: fit-content;
+  float: left;
+  position: relative;
+  top: 45px;
+  margin-left: 20;
+  border-radius: 15px;
+  background-color: rgb(127, 209, 236);
+  padding: 30px;
+  width: 700px;
+  border: black;
+  border-style: solid;
+  border-width: 1px;
+}
+.showpath div {
+  margin-left: 10px;
+}
+.showpath {
+  color: black;
+  font-size: 20px;
+}
+.path-list-div {
+  display: flex;
+}
+.left-inter {
+  position: relative;
+  top: -10;
+}
+.path-vertical-line {
+  position: relative;
+  left: 35px;
+  border-left: 6px solid black;
+  height: auto;
+}
+.path-output {
+  display: flex;
+}
+* {
+  box-sizing: border-box;
+}
+.li-inter {
+  display: flex;
+}
+body {
+  font-size: 14px;
+}
+@keyframes glowing {
+  0% {
+    background-color: black;
+    box-shadow: 0 0 0 2px skyblue;
+  }
+  50% {
+    background-color: skyblue;
+    box-shadow: 0 0 0 2px rgb(40, 41, 41);
+  }
+  100% {
+    background-color: skyblue;
+    box-shadow: 0 0 0 2px black;
+  }
+}
+#metro1 {
+  background-image: url("cityscape_T.png");
+  background-position: top;
+  height: 400px;
+}
+#metro {
+  margin-top: -100px;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  transform: translateX(0px);
+  animation-name: movetrain;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+#metro span {
+  display: inline-block;
+}
+.door,
+.door2 {
+  width: 30px;
+  height: 43px;
+  background-color: #cf1d01;
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 10px;
+  box-shadow: inset 0 -5px 0 #961703;
+  border: 1px solid black;
+}
+.door2 {
+  width: 25px;
+  margin-top: -18px;
+  margin-left: 215px;
+}
+.door::before,
+.door2::before {
+  content: "";
+  width: 20px;
+  height: 19px;
+  background-color: #008acb;
+  box-shadow: inset 0 0 10px #004fc8, inset 0 2px 0 blue;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 2px;
+  border: 3px solid #961703;
+}
+.door2::before {
+  width: 17px;
+  margin-left: 1px;
+}
+.mirror,
+.mirror1 {
+  width: 154px;
+  height: 15px;
+  background-color: #666665;
+  margin-top: 18px;
+  margin-left: 50px;
+  border: 1px solid black;
+}
+.mirror1 {
+  width: 140px;
+  border-radius: 0 100% 0 0;
+}
+.mirror span,
+.mirror1 span {
+  display: inline-block;
+}
+.m1,
+.m2,
+.m3,
+.m4,
+.m22 {
+  display: inline-block;
+  width: 35px;
+  height: 11px;
+  background-color: #008acb;
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 1px;
+  box-shadow: inset 0 0 8px #004fc8;
+  border: 1px solid blue;
+}
+.m22 {
+  width: 70px;
+  border-radius: 0 100% 0 0;
+  margin-left: 42px;
+}
+.m2 {
+  margin-left: 40px;
+}
+.m3 {
+  margin-left: 79px;
+}
+.m4 {
+  margin-left: 117px;
+}
+.back {
+  background-color: #e3e1e1;
+  width: 250px;
+  height: 60px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+}
+.back::after {
+  content: "";
+  background-color: black;
+  width: 6px;
+  height: 10px;
+  position: absolute;
+  margin-left: 249px;
+  margin-top: 1px;
+  border-radius: 10px;
+}
+
+.engine {
+  background-color: #e3e1e1;
+  width: 300px;
+  height: 60px;
+  border-radius: 0px 100% 10px 10px;
+  box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+}
+.engine::before {
+  content: "";
+  width: 280px;
+  height: 20px;
+  background-color: #cf1d01;
+  border-top: 1px solid #cf1d01;
+  box-shadow: inset 0px 4px 0px #e3e1e1, 0 4px 0px black,
+    inset 0 -5px 0px #961703;
+  position: absolute;
+  margin-top: 40px;
+  border-radius: 0 100% 10px 10px;
+}
+@keyframes movetrain {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+  80% {
+    transform: translateX(300px);
+  }
+  81% {
+    transform: translateX(310px);
+  }
+  82% {
+    transform: translateX(311px);
+  }
+  83% {
+    transform: translateX(312px);
+  }
+  84% {
+    transform: translateX(313px);
+  }
+  85% {
+    transform: translateX(314px);
+  }
+  89% {
+    transform: translateX(320px);
+  }
+  90% {
+    transform: translateX(400px);
+  }
+}
+@keyframes spark1 {
+  100% {
+    background-color: red;
+  }
+  10% {
+    background-color: yellow;
+  }
+}
